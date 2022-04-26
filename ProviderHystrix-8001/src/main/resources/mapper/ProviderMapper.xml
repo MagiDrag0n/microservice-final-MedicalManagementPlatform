@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.ProviderDAO">
+
+    <insert id="regisUser"></insert>
+    <update id="updateUser"></update>
+    <select id="getUser" resultType="com.entities.User"></select>
+
+    <insert id="addMedicine"></insert>
+    <select id="getMedicine" resultType="com.entities.Medicine"></select>
+    <update id="updateMedicine"></update>
+    <delete id="deleteMedicine"></delete>
+
+    <insert id="createOrder"></insert>
+    <select id="getOrder" resultType="com.entities.Order"></select>
+    <delete id="deleteOrder"></delete>
+
+    <insert id="initDept"></insert>
+    <select id="getDept" resultType="com.entities.Dept"></select>
+    <update id="updateDept"></update>
+
+    <insert id="empDoctor"></insert>
+    <select id="getDoctor" resultType="com.entities.Doctor"></select>
+    <update id="updateDoctor"></update>
+    <delete id="ueDoctor"></delete>
+
+    <insert id="signRegister"></insert>
+    <select id="getRegister" resultType="com.entities.Register"></select>
+
+</mapper>
