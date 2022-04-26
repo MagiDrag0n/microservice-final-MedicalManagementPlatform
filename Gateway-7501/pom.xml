@@ -37,12 +37,11 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
-        <!--        &lt;!&ndash; 统一输出结果 &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>com.atguigu.springcloud</groupId>-->
-        <!--            <artifactId>cloud-api-commons</artifactId>-->
-        <!--            <version>${project.version}</version>-->
-        <!--        </dependency>-->
-        <!-- Spring Boot Test -->
+        <!-- 统一输出结果 -->
+        <dependency>
+            <groupId>com.magi-verse.blog</groupId>
+            <artifactId>API-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>
