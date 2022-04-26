@@ -27,13 +27,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-<!--        &lt;!&ndash; 统一输出结果 &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.atguigu.springcloud</groupId>-->
-<!--            <artifactId>cloud-api-commons</artifactId>-->
-<!--            <version>${project.version}</version>-->
-<!--        </dependency>-->
-        <!-- Spring Boot Test -->
+        <!-- Spring Boot 测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -43,5 +37,12 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
+        <!--        &lt;!&ndash; 统一输出结果 &ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.atguigu.springcloud</groupId>-->
+        <!--            <artifactId>cloud-api-commons</artifactId>-->
+        <!--            <version>${project.version}</version>-->
+        <!--        </dependency>-->
+        <!-- Spring Boot Test -->
     </dependencies>
 </project>
