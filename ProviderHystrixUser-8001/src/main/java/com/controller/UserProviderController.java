@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping("provider")
+@RequestMapping("user")
 public class UserProviderController {
     @Resource
     private UserProviderService userProviderService;
@@ -22,20 +22,20 @@ public class UserProviderController {
 //        log.info("*****插入结果:"+ result);
 //        log4j ???
         if(result > 0) {
-            return new CommonResult(200,"插入数据成功。" + result);
+            return new CommonResult(200,"插入数据成功。", result);
         }else{
-            return new CommonResult(400,"插入数据失败",null);
+            return new CommonResult(400,"插入数据失败", null);
         }
     }
 
     @GetMapping(value = "/getUser/{id}")
     public CommonResult getUser(@PathVariable("id") Long id){
         User user = userProviderService.getUser(id);
-//        log.info("*****插入结果：{payment}");
+//        log.info("*****插入结果：{user}");
         if (user != null) {
-            return new CommonResult(200,"查询成功",user);
+            return new CommonResult(200,"查询成功", user);
         } else {
-            return new CommonResult(444, "无记录");
+            return new CommonResult(400, "无记录", null);
         }
     }
 
@@ -44,9 +44,9 @@ public class UserProviderController {
         int result = userProviderService.updateUser(user);
         //        log.info("*****插入结果:"+ result);
         if(result > 0) {
-            return new CommonResult(200,"插入数据成功。" + result);
+            return new CommonResult(200,"更新数据成功。", result);
         }else{
-            return new CommonResult(400,"插入数据失败",null);
+            return new CommonResult(400,"更新数据失败", null);
         }
     }
 }

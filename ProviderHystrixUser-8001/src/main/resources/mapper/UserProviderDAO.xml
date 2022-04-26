@@ -11,10 +11,10 @@
         <id column="wallet" property="wallet" jdbcType="DECIMAL"/>
     </resultMap>
     <select id="getUser" resultMap="BaseUserResultMap">
-        SELECT * FROM user WHERE id=#{id};
+        SELECT * FROM user WHERE id = #{id};
     </select>
     <update id="updateUser">
-        UPDATE user SET name = #{name}, birth = #{birth}, wallet = #{wallet};
+        UPDATE user SET name = #{name}, birth = #{birth}, wallet = #{wallet} WHERE id = #{id};
     </update>
 
     <insert id="createOrder"></insert>

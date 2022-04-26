@@ -14,5 +14,6 @@ public class Medicine {
     private Long OrderId;//标记属于哪个订单
     private String name;//药品名称
     private String usage;//药品用量
-    private Timestamp exp;//药品有效期
+    private Timestamp prod;//生产日期
+    private String expd;//药品有效期
 }
