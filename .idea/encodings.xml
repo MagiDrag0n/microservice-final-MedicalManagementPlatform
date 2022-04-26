@@ -7,8 +7,8 @@
     <file url="file://$PROJECT_DIR$/EurekaServer-7001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Gateway-7501/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Gateway-7501/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ProviderHystrix-8001/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ProviderHystrix-8001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProviderHystrixUser-8001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProviderHystrixUser-8001/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

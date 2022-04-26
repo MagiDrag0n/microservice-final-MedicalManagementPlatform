@@ -8,12 +8,15 @@
     <resultMap id="BaseUserResultMap" type="com.entities.User">
         <id column="id" property="id" jdbcType="BIGINT" />
         <id column="name" property="name" jdbcType="VARCHAR"/>
-        <id column="birth" property="birth" jdbcType="DATETIME"/>
+        <id column="birth" property="birth" jdbcType="DATE"/>
+        <id column="wallet" property="wallet" jdbcType="DECIMAL"/>
     </resultMap>
     <select id="getUser" resultMap="BaseUserResultMap">
         SELECT * FROM user WHERE id=#{id};
     </select>
-    <update id="updateUser"></update>
+    <update id="updateUser">
+        UPDATE user SET name = #{name}, birth = #{birth}, wallet = #{wallet};
+    </update>
 
 
     <insert id="addMedicine"></insert>

@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server-7001:7001/eureka
+      defaultZone: http://127.0.0.1:7001/eureka
   instance:
     ip-address: 127.0.0.1
     instance-id: provider-hystrix-8001
