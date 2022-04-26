@@ -9,11 +9,6 @@ public interface ProviderDAO {
     public User getUser(@Param("id") Long id);
     public int updateUser(User user);
 
-    public int addMedicine(Medicine medicine);
-    public Medicine getMedicine(@Param("id") Long id);
-    public int updateMedicine(Medicine medicine);
-    public int deleteMedicine(@Param("id") Long id);
-
     public int createOrder(Order order);
     public Order getOrder(@Param("id") Long id);
 //    public int updateOrder(Order order);
