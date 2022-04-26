@@ -10,6 +10,8 @@
   <modules>
     <module>EurekaServer-7001</module>
     <module>Gateway-7501</module>
+    <module>ProviderHystrix-8001</module>
+    <module>API-commons</module>
   </modules>
 
   <packaging>pom</packaging>

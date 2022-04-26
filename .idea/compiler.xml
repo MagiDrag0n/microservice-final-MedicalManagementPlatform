@@ -7,8 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ProviderHystrix-8001" />
         <module name="EurekaServer-7001" />
         <module name="Gateway-7501" />
+        <module name="API-commons" />
       </profile>
     </annotationProcessing>
   </component>
