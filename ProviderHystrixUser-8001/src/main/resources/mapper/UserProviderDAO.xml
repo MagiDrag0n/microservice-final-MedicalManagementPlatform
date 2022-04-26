@@ -2,8 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.UserProviderDAO">
     <insert id="regisUser">
-        INSERT INTO user(id, name, birth, wallet) VALUES (#{id}, #{name}, #{birth}, 0);
+        INSERT INTO user(id, name, birth, wallet) VALUES (id = #{id}, name = #{name}, birth = #{birth}, wallet = #{wallet});
     </insert>
+
     <resultMap id="BaseUserResultMap" type="com.entities.User">
         <id column="id" property="id" jdbcType="BIGINT" />
         <id column="name" property="name" jdbcType="VARCHAR"/>
@@ -13,6 +14,7 @@
     <select id="getUser" resultMap="BaseUserResultMap">
         SELECT * FROM user WHERE id = #{id};
     </select>
+
     <update id="updateUser">
         UPDATE user SET name = #{name}, birth = #{birth}, wallet = #{wallet} WHERE id = #{id};
     </update>

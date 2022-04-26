@@ -24,7 +24,7 @@ public class MedicineProviderController {
         }
     }
 
-    @GetMapping(value = "/getMedicine")
+    @GetMapping(value = "/getMedicine/{id}")
     public CommonResult getMedicine(@PathVariable("id") Long id){
         Medicine medicine = medicineProviderService.getMedicine(id);
 //        log.info("*****插入结果：{medicine}");
