@@ -33,5 +33,15 @@
 <!--            <artifactId>cloud-api-commons</artifactId>-->
 <!--            <version>${project.version}</version>-->
 <!--        </dependency>-->
+        <!-- Spring Boot Test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
     </dependencies>
 </project>
