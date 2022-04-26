@@ -12,6 +12,7 @@
     <module>Gateway-7501</module>
     <module>ProviderHystrixUser-8001</module>
     <module>API-commons</module>
+    <module>ProviderHystrixMedicine-8002</module>
   </modules>
 
   <packaging>pom</packaging>

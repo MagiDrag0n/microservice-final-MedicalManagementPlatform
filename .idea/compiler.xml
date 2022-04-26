@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ProviderHystrixMedicine-8002" />
         <module name="EurekaServer-7001" />
         <module name="Gateway-7501" />
         <module name="ProviderHystrixUser-8001" />
