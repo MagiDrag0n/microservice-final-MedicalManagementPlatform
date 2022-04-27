@@ -1,10 +1,12 @@
 package com.service;
 
 import com.dao.OrderProviderDAO;
+import com.entities.DTO.MedicineOrder;
 import com.entities.Order;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class OrderProviderServiceImpl implements OrderProviderService{
@@ -17,7 +19,7 @@ public class OrderProviderServiceImpl implements OrderProviderService{
     }
 
     @Override
-    public Order getOrder(Long id) {
+    public List<Order> getOrder(Long id) {
         return orderProviderDAO.getOrder(id);
     }
 

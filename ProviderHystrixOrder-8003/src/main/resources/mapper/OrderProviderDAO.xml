@@ -6,15 +6,27 @@
         INSERT INTO `order`(`id`,`patientid`,`bill`,`valid`,`time`) VALUES (#{id},#{patientid},#{bill},#{valid},#{time});
     </insert>
 
-    <resultMap id="BaseOrderResultMap" type="com.entities.Order">
+    <resultMap id="BaseGetResultMap" type="com.entities.Order">
         <id column="id" property="id" jdbcType="BIGINT" />
-        <id column="patientId" property="patientid" jdbcType="BIGINT"/>
-        <id column="bill" property="bill" jdbcType="DECIMAL"/>
-        <id column="valid" property="valid" jdbcType="TINYINT"/>
-        <id column="time" property="time" jdbcType="DATE"/>
+        <result column="patientid" property="patientid" jdbcType="BIGINT"/>
+        <result column="bill" property="bill" jdbcType="DECIMAL"/>
+        <result column="valid" property="valid" jdbcType="TINYINT"/>
+        <result column="time" property="time" jdbcType="DATE"/>
+        <collection property="medicine" ofType="com.entities.Medicine">
+            <id column="mid" property="id" jdbcType="BIGINT"></id>
+            <result column="mname" property="name" jdbcType="VARCHAR"/>
+            <result column="usage" property="usage" jdbcType="VARCHAR"/>
+            <result column="prod" property="prod" jdbcType="DATE"/>
+            <result column="expd" property="expd" jdbcType="VARCHAR"/>
+            <result column="price" property="price" jdbcType="DECIMAL"/>
+            <result column="orderid" property="orderid" jdbcType="BIGINT"/>
+        </collection>
     </resultMap>
-    <select id="getOrder" resultMap="BaseOrderResultMap">
-        SELECT * FROM `order` WHERE `id`=#{id};
+    <select id="getOrder" resultMap="BaseGetResultMap">
+        SELECT
+            `order`.id,`order`.patientid,`order`.bill,`order`.valid,`order`.time,
+            `medicine`.id AS mid,`medicine`.name AS mname,`medicine`.usage,`medicine`.prod,`medicine`.expd,`medicine`.price,`medicine`.orderid
+        FROM `order` INNER JOIN `medicine` ON `order`.`id` = `medicine`.`orderid`;
     </select>
 
     <delete id="deleteOrder">

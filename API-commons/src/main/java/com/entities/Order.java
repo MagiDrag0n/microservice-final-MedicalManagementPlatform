@@ -17,4 +17,6 @@ public class Order {
     private BigDecimal bill;//订单总价
     private Timestamp time;//订单时间
     private int valid;//表示当前订单有效情况
+
+    private List<Medicine> medicine;
 }

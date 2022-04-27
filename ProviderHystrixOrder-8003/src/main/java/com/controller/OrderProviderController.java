@@ -1,12 +1,14 @@
 package com.controller;
 
 import com.CommonResult;
+import com.entities.DTO.MedicineOrder;
 import com.entities.Order;
 import com.service.OrderProviderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "order")
@@ -28,9 +30,10 @@ public class OrderProviderController {
 
     @GetMapping(value = "/getOrder/{id}")
     public CommonResult getOrder(@PathVariable("id") Long id){
-        Order order = orderProviderService.getOrder(id);
+        List<Order> order = orderProviderService.getOrder(id);
         log.info("*****查询结果：{order}");
         if(order != null){
+            log.info(String.valueOf(order));
             return new CommonResult(200,"查询数据成功。", order);
         }else{
             return new CommonResult(400,"查询数据失败。", null);
