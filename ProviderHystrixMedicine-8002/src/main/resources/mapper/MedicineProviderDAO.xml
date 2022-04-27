@@ -24,22 +24,4 @@
     <delete id="deleteMedicine">
         DELETE FROM medicine WHERE id = #{id};
     </delete>
-
-    <insert id="createOrder">
-        INSERT INTO `order`(`id`,`patientid`,`bill`,`valid`,`time`) VALUES (#{id},#{patientid},#{bill},#{valid},#{time});
-    </insert>
-
-    <resultMap id="BaseOrderResultMap" type="com.entities.Order">
-        <id column="id" property="id" jdbcType="BIGINT" />
-        <id column="patientId" property="patientid" jdbcType="BIGINT"/>
-        <id column="bill" property="bill" jdbcType="DECIMAL"/>
-        <id column="valid" property="valid" jdbcType="TINYINT"/>
-        <id column="time" property="time" jdbcType="DATE"/>
-    </resultMap>
-    <select id="getOrder" resultMap="BaseOrderResultMap">
-        SELECT * FROM `order` WHERE `id`=#{id};
-    </select>
-    <delete id="deleteOrder">
-        DELETE FROM `order` WHERE id = #{id};
-    </delete>
 </mapper>
