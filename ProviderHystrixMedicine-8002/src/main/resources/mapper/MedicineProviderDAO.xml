@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.MedicineProviderDAO">
     <insert id="addMedicine">
-        INSERT INTO medicine (`id`, `name`, `usage`, `prod`, `expd`) VALUES (#{id},#{name},#{usage},#{prod},#{expd});
+        INSERT INTO medicine (`id`, `name`, `usage`, `prod`, `expd`, `price`) VALUES (#{id},#{name},#{usage},#{prod},#{expd},#{price});
     </insert>
 
     <resultMap id="BaseMedicineResultMap" type="com.entities.Medicine">
@@ -18,7 +18,7 @@
     </select>
 
     <update id="updateMedicine">
-        UPDATE medicine SET `id` = #{id},`name` = #{name},`usage` = #{usage},`prod` = #{prod},`expd` = #{expd} WHERE `id` = #{id};
+        UPDATE medicine SET `id` = #{id},`name` = #{name},`usage` = #{usage},`prod` = #{prod},`expd` = #{expd},`price` = #{price} WHERE `id` = #{id};
     </update>
 
     <delete id="deleteMedicine">
