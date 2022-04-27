@@ -19,12 +19,6 @@
         UPDATE user SET `name` = #{name}, `birth` = #{birth}, `wallet` = #{wallet} WHERE `id` = #{id};
     </update>
 
-
-
-    <insert id="initDept"></insert>
-    <select id="getDept" resultType="com.entities.Dept"></select>
-    <update id="updateDept"></update>
-
     <insert id="empDoctor"></insert>
     <select id="getDoctor" resultType="com.entities.Doctor"></select>
     <update id="updateDoctor"></update>
