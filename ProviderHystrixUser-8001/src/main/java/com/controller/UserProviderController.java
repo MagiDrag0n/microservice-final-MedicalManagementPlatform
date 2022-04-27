@@ -32,7 +32,7 @@ public class UserProviderController {
     @GetMapping(value = "/getUser/{id}")
     public CommonResult getUser(@PathVariable("id") Long id){
         User user = userProviderService.getUser(id);
-        log.info("*****插入结果：{user}");
+        log.info("*****查询结果：{user}");
         if (user != null) {
             return new CommonResult(200,"查询成功", user);
         } else {
