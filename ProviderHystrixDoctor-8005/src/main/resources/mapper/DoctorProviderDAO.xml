@@ -11,9 +11,14 @@
         <result column="name" property="name" jdbcType="VARCHAR"/>
         <result column="title" property="title" jdbcType="VARCHAR"/>
         <result column="validtime" property="validtime" jdbcType="VARCHAR"/>
+        <collection property="dept" ofType="com.entities.Dept">
+            <id column="did" property="id" jdbcType="BIGINT"/>
+            <result column="dname" property="name" jdbcType="VARCHAR"/>
+        </collection>
     </resultMap>
     <select id="getDoctor" resultMap="BaseGetDoctorResultMap">
-        SELECT * FROM doctor WHERE id = #{id};
+        SELECT id,deptid,name,title,validtime,
+               `dept`.`id` AS did,`dept`.`name` FROM doctor INNER JOIN dept WHERE `doctor`.id AND `dept`.`id` = #{id};
     </select>
 
     <update id="updateDoctor">

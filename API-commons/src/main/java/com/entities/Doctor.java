@@ -13,4 +13,6 @@ public class Doctor {
     private String title;//医生职称
     private Long deptid;//医生科室
     private String validtime;//工作时间
+
+    private Dept dept;
 }
