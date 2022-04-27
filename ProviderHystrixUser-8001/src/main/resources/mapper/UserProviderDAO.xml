@@ -19,9 +19,7 @@
         UPDATE user SET `name` = #{name}, `birth` = #{birth}, `wallet` = #{wallet} WHERE `id` = #{id};
     </update>
 
-    <insert id="createOrder"></insert>
-    <select id="getOrder" resultType="com.entities.Order"></select>
-    <delete id="deleteOrder"></delete>
+
 
     <insert id="initDept"></insert>
     <select id="getDept" resultType="com.entities.Dept"></select>
