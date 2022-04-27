@@ -5,6 +5,7 @@ import com.entities.Doctor;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 public class DoctorProviderServiceImpl implements DoctorProviderService{
@@ -17,7 +18,7 @@ public class DoctorProviderServiceImpl implements DoctorProviderService{
     }
 
     @Override
-    public Doctor getDoctor(Long id) {
+    public List<Doctor> getDoctor(Long id) {
         return doctorProviderDAO.getDoctor(id);
     }
 

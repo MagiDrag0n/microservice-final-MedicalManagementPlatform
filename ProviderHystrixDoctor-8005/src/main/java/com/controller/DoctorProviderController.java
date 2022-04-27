@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "doctor")
@@ -28,7 +29,7 @@ public class DoctorProviderController {
 
     @GetMapping(value = "/getDoctor/{id}")
     public CommonResult getDoctor(@PathVariable("id") Long id){
-        Doctor doctor = doctorProviderService.getDoctor(id);
+        List<Doctor> doctor = doctorProviderService.getDoctor(id);
         log.info("*****查询结果：{doctor}");
         if(doctor != null){
             return new CommonResult(200,"查询数据成功。",doctor);

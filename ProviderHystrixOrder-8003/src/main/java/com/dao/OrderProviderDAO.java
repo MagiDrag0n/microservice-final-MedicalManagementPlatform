@@ -1,6 +1,5 @@
 package com.dao;
 
-import com.entities.DTO.MedicineOrder;
 import com.entities.Order;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

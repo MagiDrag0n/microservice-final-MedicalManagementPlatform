@@ -17,8 +17,9 @@
         </collection>
     </resultMap>
     <select id="getDoctor" resultMap="BaseGetDoctorResultMap">
-        SELECT id,deptid,name,title,validtime,
-               `dept`.`id` AS did,`dept`.`name` FROM doctor INNER JOIN dept WHERE `doctor`.id AND `dept`.`id` = #{id};
+        SELECT * FROM `doctor`
+            WHERE id = #{id}
+            INNER JOIN `dept` WHERE `doctor`.`deptid` = `dept`.`id`;
     </select>
 
     <update id="updateDoctor">
