@@ -7,12 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ProviderHystrixMedicine-8002" />
-        <module name="EurekaServer-7001" />
         <module name="Gateway-7501" />
-        <module name="ProviderHystrixUser-8001" />
+        <module name="ProviderHystrixRegister-8006" />
         <module name="API-commons" />
         <module name="ProviderHystrixOrder-8003" />
+        <module name="ProviderHystrixDoctor-8005" />
+        <module name="ProviderHystrixMedicine-8002" />
+        <module name="EurekaServer-7001" />
+        <module name="ProviderHystrixUser-8001" />
+        <module name="ProviderHystrixDept-8004" />
       </profile>
     </annotationProcessing>
   </component>

@@ -7,10 +7,16 @@
     <file url="file://$PROJECT_DIR$/EurekaServer-7001/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Gateway-7501/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Gateway-7501/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProviderHystrixDept-8004/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProviderHystrixDept-8004/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProviderHystrixDoctor-8005/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProviderHystrixDoctor-8005/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProviderHystrixMedicine-8002/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProviderHystrixMedicine-8002/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProviderHystrixOrder-8003/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProviderHystrixOrder-8003/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProviderHystrixRegister-8006/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ProviderHystrixRegister-8006/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProviderHystrixUser-8001/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ProviderHystrixUser-8001/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

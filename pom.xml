@@ -14,6 +14,9 @@
     <module>API-commons</module>
     <module>ProviderHystrixMedicine-8002</module>
     <module>ProviderHystrixOrder-8003</module>
+    <module>ProviderHystrixDept-8004</module>
+    <module>ProviderHystrixDoctor-8005</module>
+    <module>ProviderHystrixRegister-8006</module>
   </modules>
 
   <packaging>pom</packaging>
