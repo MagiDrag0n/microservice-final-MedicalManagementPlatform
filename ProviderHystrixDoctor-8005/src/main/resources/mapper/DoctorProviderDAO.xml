@@ -7,11 +7,20 @@
 
     <resultMap id="BaseGetDoctorResultMap" type="com.entities.Doctor">
         <id column="id" property="id" jdbcType="BIGINT"/>
-        <result column="deptid" property=""
+        <result column="deptid" property="deptid" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="validtime" property="validtime" jdbcType="VARCHAR"/>
     </resultMap>
-    <select id="getDoctor" resultType="com.entities.Doctor">
-
+    <select id="getDoctor" resultMap="BaseGetDoctorResultMap">
+        SELECT * FROM doctor WHERE id = #{id};
     </select>
-    <update id="updateDoctor"></update>
-    <delete id="ueDoctor"></delete>
+
+    <update id="updateDoctor">
+        UPDATE doctor SET deptid=#{deptid},name=#{name},title=#{title},validtime=#{validtime} WHERE id=#{id};
+    </update>
+
+    <delete id="ueDoctor">
+        DELETE FROM doctor WHERE id=#{id};
+    </delete>
 </mapper>
