@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 @Data
@@ -16,4 +17,5 @@ public class Medicine {
     private String usage;//药品用量
     private Timestamp prod;//生产日期
     private String expd;//药品有效期
+    private BigDecimal price;//药品价格
 }
