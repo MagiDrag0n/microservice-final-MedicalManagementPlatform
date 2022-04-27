@@ -2,9 +2,11 @@ package com.service;
 
 import com.dao.DeptProviderDAO;
 import com.entities.Dept;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
+@Service
 public class DeptProviderServiceImpl implements DeptProviderService{
     @Resource
     private DeptProviderDAO deptProviderDAO;
