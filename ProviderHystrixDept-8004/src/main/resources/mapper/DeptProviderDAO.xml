@@ -9,7 +9,7 @@
         <result column="name" property="name" jdbcType="VARCHAR"/>
     </resultMap>
     <select id="getDept" resultMap="BaseGetDeptResultMap">
-        SELECT * FROM dept;
+        SELECT * FROM dept WHERE id = #{id};
     </select>
 
     <update id="updateDept">
