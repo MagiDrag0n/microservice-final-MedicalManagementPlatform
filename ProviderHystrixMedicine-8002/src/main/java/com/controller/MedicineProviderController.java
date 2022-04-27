@@ -45,7 +45,7 @@ public class MedicineProviderController {
         }
     }
 
-    @RequestMapping("/deleteMedicine")
+    @GetMapping("/deleteMedicine/{id}")
     public CommonResult deleteMedicine(@PathVariable("id") Long id){
         int result = medicineProviderService.deleteMedicine(id);
         if(result > 0){
