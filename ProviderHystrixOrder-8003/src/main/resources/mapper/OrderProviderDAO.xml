@@ -24,8 +24,8 @@
     </resultMap>
     <select id="getOrder" resultMap="BaseGetResultMap">
         SELECT
-            `order`.id,`order`.patientid,`order`.bill,`order`.valid,`order`.time,
-            `medicine`.id AS mid,`medicine`.name AS mname,`medicine`.usage,`medicine`.prod,`medicine`.expd,`medicine`.price,`medicine`.orderid
+            `order`.id,`order`.patientid,`order`.bill,`order`.valid,`order`.`time`,
+            `medicine`.`id` AS mid,`medicine`.`name` AS mname,`medicine`.`usage`,`medicine`.`prod`,`medicine`.`expd`,`medicine`.`price`,`medicine`.`orderid`
         FROM `order` INNER JOIN `medicine` ON `order`.`id` = `medicine`.`orderid`;
     </select>
 

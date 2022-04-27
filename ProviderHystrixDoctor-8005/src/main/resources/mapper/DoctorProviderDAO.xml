@@ -17,9 +17,10 @@
         </collection>
     </resultMap>
     <select id="getDoctor" resultMap="BaseGetDoctorResultMap">
-        SELECT * FROM `doctor`
-            WHERE id = #{id}
-            INNER JOIN `dept` WHERE `doctor`.`deptid` = `dept`.`id`;
+        SELECT
+            `doctor`.id,`doctor`.deptid,`doctor`.name,`doctor`.title,`doctor`.`validtime`,
+            `dept`.`id` AS did,`dept`.`name` AS dname
+        FROM `doctor` INNER JOIN `dept` ON `doctor`.`deptid` = `dept`.`id`;
     </select>
 
     <update id="updateDoctor">
