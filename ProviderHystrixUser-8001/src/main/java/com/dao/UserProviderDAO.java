@@ -9,12 +9,6 @@ public interface UserProviderDAO {
     public User getUser(@Param("id") Long id);
     public int updateUser(User user);
 
-    public int initDept(Dept dept);
-    public Dept getDept(@Param("id") Long id);
-    public int updateDept(Dept dept);
-//    public int deleteDept(@Param("id") Long id);
-//    医院大概率不会取消某个科室吧？
-
     public int empDoctor(Doctor doctor);
     public Doctor getDoctor(@Param("id") Long id);
     public int updateDoctor(Doctor doctor);
