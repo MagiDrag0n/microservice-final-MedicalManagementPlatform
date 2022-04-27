@@ -14,14 +14,14 @@
         <id column="expd" property="expd" jdbcType="VARCHAR"/>
     </resultMap>
     <select id="getMedicine" resultMap="BaseMedicineResultMap">
-        SELECT * FROM medicine WHERE id = #{id};
+        SELECT * FROM medicine WHERE `id` = #{id};
     </select>
 
     <update id="updateMedicine">
-        UPDATE medicine SET name = #{name}, usage = #{usage}, prod = #{prod}, expd = #{expd};
+        UPDATE medicine SET `id` = #{id},`name` = #{name},`usage` = #{usage},`prod` = #{prod},`expd` = #{expd} WHERE `id` = #{id};
     </update>
 
     <delete id="deleteMedicine">
-        DELETE medicine WHERE id = #{id};
+        DELETE medicine WHERE `id` = #{id};
     </delete>
 </mapper>
