@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.DoctorProviderDAO">
-    <insert id="empDoctor"></insert>
-    <select id="getDoctor" resultType="com.entities.Doctor"></select>
+    <insert id="empDoctor">
+        INSERT INTO doctor(`id`,`name`,`title`,`deptid`,`validtime`) VALUES(#{id},#{name},#{title},#{deptid},#{validtime});
+    </insert>
+
+    <resultMap id="BaseGetDoctorResultMap" type="com.entities.Doctor">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="deptid" property=""
+    </resultMap>
+    <select id="getDoctor" resultType="com.entities.Doctor">
+
+    </select>
     <update id="updateDoctor"></update>
     <delete id="ueDoctor"></delete>
 </mapper>
