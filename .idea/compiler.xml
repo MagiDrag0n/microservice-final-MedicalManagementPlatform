@@ -12,6 +12,7 @@
         <module name="Gateway-7501" />
         <module name="ProviderHystrixUser-8001" />
         <module name="API-commons" />
+        <module name="ProviderHystrixOrder-8003" />
       </profile>
     </annotationProcessing>
   </component>

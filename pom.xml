@@ -13,6 +13,7 @@
     <module>ProviderHystrixUser-8001</module>
     <module>API-commons</module>
     <module>ProviderHystrixMedicine-8002</module>
+    <module>ProviderHystrixOrder-8003</module>
   </modules>
 
   <packaging>pom</packaging>
