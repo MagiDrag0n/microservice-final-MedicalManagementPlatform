@@ -45,9 +45,9 @@ public class OrderProviderController {
         int result = orderProviderService.deleteOrder(id);
         log.info("*****删除结果：{result}");
         if(result > 0){
-            return new CommonResult(200,"删除数据成功。", result);
+            return new CommonResult(200,"失效数据成功。", result);
         }else {
-            return new CommonResult(400,"删除数据失败。", result);
+            return new CommonResult(400,"失效数据失败。", result);
         }
     }
 }

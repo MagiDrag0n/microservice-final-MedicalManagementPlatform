@@ -30,6 +30,6 @@
     </select>
 
     <delete id="deleteOrder">
-        DELETE FROM `order` WHERE id = #{id};
+        UPDATE `order` SET valid = 0 WHERE id = #{id};
     </delete>
 </mapper>
