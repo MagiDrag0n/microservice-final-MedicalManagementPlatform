@@ -1,0 +1,23 @@
+server:
+  port: 7601
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    ip-address: 127.0.0.1
+    instance-id: config-center-7601
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: config-center-7601
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MagiDrag0n/microservice-final-config-center.git
+          username: magidragon@foxmail.com
+          password: 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
+      label: main
