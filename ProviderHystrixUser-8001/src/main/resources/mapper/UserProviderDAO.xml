@@ -18,8 +18,4 @@
     <update id="updateUser">
         UPDATE user SET `name` = #{name}, `birth` = #{birth}, `wallet` = #{wallet} WHERE `id` = #{id};
     </update>
-
-    <insert id="signRegister"></insert>
-    <select id="getRegister" resultType="com.entities.Register"></select>
-
 </mapper>
