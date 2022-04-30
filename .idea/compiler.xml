@@ -11,6 +11,7 @@
         <module name="Gateway-7501" />
         <module name="ProviderHystrixRegister-8006" />
         <module name="API-commons" />
+        <module name="ConsumerFeignHystrix-9001" />
         <module name="ProviderHystrixOrder-8003" />
         <module name="ProviderHystrixDoctor-8005" />
         <module name="ProviderHystrixMedicine-8002" />
