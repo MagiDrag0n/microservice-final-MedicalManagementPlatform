@@ -3,11 +3,8 @@ package com.controller;
 import com.CommonResult;
 import com.entities.User;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.service.ProviderHystrixUser;
-import com.service.fallback.ProviderHystrixUserFallback;
-import javafx.beans.DefaultProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
