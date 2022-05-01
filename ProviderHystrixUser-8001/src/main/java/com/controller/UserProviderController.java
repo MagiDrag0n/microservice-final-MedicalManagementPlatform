@@ -2,6 +2,7 @@ package com.controller;
 
 import com.CommonResult;
 import com.entities.User;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.service.UserProviderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

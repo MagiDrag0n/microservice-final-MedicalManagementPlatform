@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@FeignClient(value = "provider-hystrix-user-8001",contextId = "User", fallbackFactory = ProviderHystrixUserFallback.class)
+@FeignClient(value = "PROVIDER-HYSTRIX-USER-8001",contextId = "User")
 public interface ProviderHystrixUser {
     @RequestMapping(value = "/user/regisUser")
     CommonResult regisUser_OK(@RequestBody User user);
