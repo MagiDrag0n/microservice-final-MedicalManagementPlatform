@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        service-id: config-center-7601
+        enabled: true
+      uri: http://127.0.0.1:7601
+      label: master
+      profile: dev
+      name: consumer-feign-hystrix-9001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
