@@ -3,7 +3,9 @@ package com.service.fallback;
 import com.CommonResult;
 import com.entities.Dept;
 import com.service.ProviderHystrixDept;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProviderHystrixDeptFallback implements ProviderHystrixDept {
     @Override
     public CommonResult initDept(Dept dept) {
