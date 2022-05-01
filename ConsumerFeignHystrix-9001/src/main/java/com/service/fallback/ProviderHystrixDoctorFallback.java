@@ -3,7 +3,9 @@ package com.service.fallback;
 import com.CommonResult;
 import com.entities.Doctor;
 import com.service.ProviderHystrixDoctor;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProviderHystrixDoctorFallback implements ProviderHystrixDoctor {
     @Override
     public CommonResult empDoctor(Doctor doctor) {
