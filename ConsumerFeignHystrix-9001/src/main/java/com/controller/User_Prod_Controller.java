@@ -23,12 +23,8 @@ public class User_Prod_Controller {
     @Resource
     private ProviderHystrixUser providerHystrixUser;
 
-    @HystrixCommand(fallbackMethod = "ProviderHystrixUserFallback",commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1500")
-    })
     @GetMapping(value = "/getUser/{id}")
     public CommonResult getUser_prod(@PathVariable("id") Long id){
         return providerHystrixUser.getUser_OK(id);
     }
-
 }
