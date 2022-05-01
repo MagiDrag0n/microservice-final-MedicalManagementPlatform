@@ -18,8 +18,10 @@
         <module name="EurekaServer-7001" />
         <module name="ProviderHystrixUser-8001" />
         <module name="ProviderHystrixDept-8004" />
-        <module name="API-Hystrix" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="API-Hystrix" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
