@@ -23,6 +23,7 @@ public class ProviderHystrixUserFallback implements ProviderHystrixUser {
 
     @Override
     public CommonResult updateUser(User user) {
+        log.info("*****触发服务降级。");
         return new CommonResult(400,"服务正忙，请稍后再试。",null);
     }
 }
