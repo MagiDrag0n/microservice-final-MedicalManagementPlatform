@@ -15,4 +15,5 @@ public class User {
     private String name;//姓名
     private Timestamp birth;//生日
     private BigDecimal wallet;//医保余额
+    private String token;//JWT token
 }
