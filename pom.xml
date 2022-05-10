@@ -17,9 +17,9 @@
     <module>ProviderHystrixDept-8004</module>
     <module>ProviderHystrixDoctor-8005</module>
     <module>ProviderHystrixRegister-8006</module>
-      <module>ConfigCenter-7601</module>
+    <module>ConfigCenter-7601</module>
     <module>ConsumerFeignHystrix-9001</module>
-      <module>API-Hystrix</module>
+
   </modules>
 
   <packaging>pom</packaging>
