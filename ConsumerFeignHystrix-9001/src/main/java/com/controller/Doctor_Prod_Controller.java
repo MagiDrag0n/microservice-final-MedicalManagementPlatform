@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping(value = "me")
+@RequestMapping(value = "doctor")
 @Slf4j
 @DefaultProperties(defaultFallback = "ProviderHystrixDoctorFallback", commandProperties = {
         @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),  // 开启熔断器
