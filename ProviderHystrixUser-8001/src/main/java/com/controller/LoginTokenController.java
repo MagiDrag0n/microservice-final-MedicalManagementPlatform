@@ -5,12 +5,14 @@ import com.util.jwt;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @Slf4j
 @CrossOrigin
+@RequestMapping(value = "user")
 public class LoginTokenController {
     private final Long id = Long.valueOf(441900);
     private final String name = "magi";
@@ -20,7 +22,7 @@ public class LoginTokenController {
         log.info(String.valueOf(user));
         if(id.equals(user.getId()) && name.equals(user.getName())){
             //添加token
-            log.info("!@ACCEPT JWT");
+            log.info("AC JWT Token");
             user.setToken(jwt.createToken());
             return user;
         }
@@ -29,7 +31,7 @@ public class LoginTokenController {
 
     @GetMapping("/checkToken")
     public Boolean checkToken(HttpServletRequest request){
-        log.info("AC REQUEST");
+        log.info("CHECKED JWT Token");
         String token = request.getHeader("token");
         return jwt.checkToken(token);
     }
