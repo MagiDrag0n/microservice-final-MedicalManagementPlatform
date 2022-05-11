@@ -5,35 +5,55 @@ spring:
     name: gateway-service-7501
   cloud:
     gateway:
+#      globalcors:
+#        cors-configurations:
+#          '[/**]': # 匹配所有请求
+#            allowedOrigins: "*" #跨域处理 允许所有的域
+#            allowedMethods: # 支持的方法
+#             ‐ GET
+#             ‐ POST
+#             ‐ PUT
+#             ‐ DELETE
       discovery:
         locator:
           enabled: true  #开启从注册中心动态生成路由的功能，用微服务名进行路由
       routes:
         - id: user-service-router
           # uri: http://localhost:8001
-          uri: lb://PROVIDER-HYSTRIX-USER-8001
+          uri: lb://CONSUMER-FEIGN-HYSTRIX-9001
           predicates:
             - Path=/user/**
         - id: medicine-service-router
-          uri: lb://PROVIDER-HYSTRIX-MEDICINE-8002
+          uri: lb://CONSUMER-FEIGN-HYSTRIX-9001
+          fliters:
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
           predicates:
             - Path=/medicine/**
         - id: order-service-router
-          uri: lb://PROVIDER-HYSTRIX-ORDER-8003
+          uri: lb://CONSUMER-FEIGN-HYSTRIX-9001
+          fliters:
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
           predicates:
             - Path=/order/**
         - id: dept-service-router
-          uri: lb://PROVIDER-HYSTRIX-DEPT-8004
+          uri: lb://CONSUMER-FEIGN-HYSTRIX-9001
+          fliters:
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
           predicates:
             - Path=/order/**
         - id: doctor-service-router
-          uri: lb://PROVIDER-HYSTRIX-DOCTOR-8005
+          uri: lb://CONSUMER-FEIGN-HYSTRIX-9001
+          fliters:
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
           predicates:
             - Path=/doctor/**
         - id: register-service-router
-          uri: lb://PROVIDER-HYSTRIX-DOCTOR-8006
+          uri: lb://CONSUMER-FEIGN-HYSTRIX-9001
+          fliters:
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
           predicates:
             - Path=/register/**
+
 eureka:
   instance:
     hostname: Gateway-service-7501
