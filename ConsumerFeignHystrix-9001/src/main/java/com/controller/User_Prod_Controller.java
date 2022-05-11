@@ -9,9 +9,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 
 @RestController
-@RequestMapping(value = "me")
+@RequestMapping(value = "user")
 @Slf4j
 @DefaultProperties(defaultFallback = "ProviderHystrixUserFallback", commandProperties = {
         @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),  // 开启熔断器
@@ -36,5 +39,18 @@ public class User_Prod_Controller {
     @RequestMapping(value = "/regisUser")
     public CommonResult regisUser(@RequestBody User user){
         return providerHystrixUser.regisUser(user);
+    }
+
+    @PostMapping(value = "/login")
+    public CommonResult login(@RequestBody User user){
+        log.info("AC");
+        log.info(String.valueOf(user));
+        log.info(String.valueOf(providerHystrixUser.login(user)));
+        return providerHystrixUser.login(user);
+    }
+
+    @PostMapping(value = "/checkToken")
+    public Boolean checkToken(@RequestHeader(value = "token") String token){
+        return providerHystrixUser.checkToken(token);
     }
 }
