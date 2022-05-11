@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @RestController
-@RequestMapping(value = "me")
+@RequestMapping(value = "order")
 @Slf4j
 @DefaultProperties(defaultFallback = "ProviderHystrixOrderFallback", commandProperties = {
         @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),  // 开启熔断器
