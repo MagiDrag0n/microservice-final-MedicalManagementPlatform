@@ -21,9 +21,9 @@ public class DoctorProviderController {
         int result = doctorProviderService.empDoctor(doctor);
         log.info("*****插入结果：{result}");
         if(result > 0 ){
-            return new CommonResult(200,"插入数据成功。",result);
+            return new CommonResult(200,"插入数据成功",result);
         }else {
-            return new CommonResult(400,"插入数据失败。",null);
+            return new CommonResult(400,"插入数据失败",null);
         }
     }
 
@@ -32,9 +32,9 @@ public class DoctorProviderController {
         List<Doctor> doctor = doctorProviderService.getDoctor(id);
         log.info("*****查询结果：{doctor}");
         if(doctor != null){
-            return new CommonResult(200,"查询数据成功。",doctor);
+            return new CommonResult(200,"查询数据成功",doctor);
         }else {
-            return new CommonResult(400,"无记录。",null);
+            return new CommonResult(400,"无记录",null);
         }
     }
 
@@ -43,9 +43,9 @@ public class DoctorProviderController {
         int result = doctorProviderService.updateDoctor(doctor);
         log.info("*****更新结果：{result}");
         if(result > 0 ){
-            return new CommonResult(200,"更新数据成功。",result);
+            return new CommonResult(200,"更新数据成功",result);
         }else {
-            return new CommonResult(400,"更新数据失败。",null);
+            return new CommonResult(400,"更新数据失败",null);
         }
     }
 
@@ -54,9 +54,9 @@ public class DoctorProviderController {
         int result = doctorProviderService.ueDoctor(id);
         log.info("*****删除结果：{result}");
         if (result > 0) {
-            return new CommonResult(200, "删除数据成功。", result);
+            return new CommonResult(200, "删除数据成功", result);
         } else {
-            return new CommonResult(400, "删除数据失败。", null);
+            return new CommonResult(400, "删除数据失败", null);
         }
     }
 }
