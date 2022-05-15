@@ -20,7 +20,7 @@ public class RegisterProviderController {
         int result = registerProviderService.signRegister(register);
         log.info("*****插入结果:"+result);
         if(result > 0) {
-            return new CommonResult(200,"插入数据成功。", result);
+            return new CommonResult(200,"插入数据成功", result);
         }else{
             return new CommonResult(400,"插入数据失败", null);
         }
