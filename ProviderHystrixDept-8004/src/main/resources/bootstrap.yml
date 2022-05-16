@@ -4,7 +4,7 @@ spring:
       discovery:
         service-id: config-center-7601
         enabled: true
-      uri: http://127.0.0.1:7601
+      uri: http://172.17.0.3:7601
       label: master
       profile: dev
       name: provider-hystrix-dept-8004

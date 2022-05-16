@@ -1,14 +1,13 @@
 package com.controller;
 
 import com.CommonResult;
+
 import com.entities.User;
 import com.service.UserProviderService;
 import com.util.jwt;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
-
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @Slf4j
@@ -16,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginTokenController {
     @Resource
     private UserProviderService userProviderService;
+
     @PostMapping("/login")
     public CommonResult login(@RequestBody User user){
         log.info("Received Login Requirement.");
