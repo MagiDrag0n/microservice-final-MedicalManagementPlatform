@@ -12,4 +12,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:7001/eureka
+      defaultZone: http://172.17.0.3:7001/eureka
+  instance:
+    ip-address: 192.168.172.130
+    instance-id: provider-hystrix-dept-8004
+    prefer-ip-address: true
