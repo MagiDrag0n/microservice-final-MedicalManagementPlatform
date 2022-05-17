@@ -55,11 +55,6 @@
 
         <!-- 统一输出结果 -->
         <dependency>
-            <groupId>com.magi-verse.blog</groupId>
-            <artifactId>API-commons</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
