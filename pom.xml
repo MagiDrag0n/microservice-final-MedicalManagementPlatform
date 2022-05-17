@@ -11,7 +11,6 @@
     <module>EurekaServer-7001</module>
     <module>Gateway-7501</module>
     <module>ProviderHystrixUser-8001</module>
-    <module>API-commons</module>
     <module>ProviderHystrixMedicine-8002</module>
     <module>ProviderHystrixOrder-8003</module>
     <module>ProviderHystrixDept-8004</module>
