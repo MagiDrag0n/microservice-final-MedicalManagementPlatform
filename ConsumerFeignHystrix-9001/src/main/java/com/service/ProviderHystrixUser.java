@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
-@FeignClient(value = "PROVIDER-HYSTRIX-USER-8001", fallback = ProviderHystrixUserFallback.class)
+@FeignClient(value = "PROVIDER-HYSTRIX-USER-8001",
+        fallback = ProviderHystrixUserFallback.class)
 public interface ProviderHystrixUser {
     @RequestMapping(value = "/user/regisUser")
     CommonResult regisUser(@RequestBody User user);

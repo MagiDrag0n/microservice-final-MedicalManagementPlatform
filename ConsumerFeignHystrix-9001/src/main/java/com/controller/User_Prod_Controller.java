@@ -17,9 +17,12 @@ import java.sql.Timestamp;
 @RequestMapping(value = "user")
 @Slf4j
 @DefaultProperties(defaultFallback = "ProviderHystrixUserFallback", commandProperties = {
-        @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),  // 开启熔断器
-        @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"),  // 当请求达到这个数量之后，才进行错误占比的计算。
-        @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000"),  // 半打开休眠时间，熔断之后过了这段休眠时间，就会半打开，尝试接口是否恢复，如果恢复就完全打开熔断器。
+        // 开启熔断器
+        @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),
+        // 当请求达到这个数量之后，才进行错误占比的计算。
+        @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "10"),
+        // 半打开休眠时间，熔断之后过了这段休眠时间，就会半打开，尝试接口是否恢复，如果恢复就完全打开熔断器。
+        @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000"),
         @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60")
 })
 public class User_Prod_Controller {
